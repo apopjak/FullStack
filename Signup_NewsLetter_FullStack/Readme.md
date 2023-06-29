@@ -11,7 +11,7 @@ The Fullstack Signup Newsletter App is a web application that allows users to si
 - Mailchimp API: An API service provided by Mailchimp for managing mailing lists and sending newsletters.
 
 
-![img.png](img.png)
+![img_3.png](img_3.png)
 
 
 ## Functionality
