@@ -1,0 +1,18 @@
+<!--HEADER THYMELEAF TEMPLATE-->
+<head>
+    <div th:replace="~{/fragments/header::myheaeder}"></div>
+    <title>Andrej Popjak BLOG</title>
+</head>
+<!--     Middle Section-->
+
+        <header class="bg-danger bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h2 class="fw-bolder">Something went wrong!</h2>
+                <h3 class="fw-bolder">Please report this bug to administrator</h3>
+                <br>
+                <a class="btn btn-lg btn-light" th:href="@{/}">Return back</a>
+            </div>
+        </header>
+
+<!-- Footer Thymeleaf Template -->
+<div th:replace="~{/fragments/footer::myfooter}"></div>
