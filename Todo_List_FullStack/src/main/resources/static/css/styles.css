@@ -1,0 +1,195 @@
+body {
+  position: relative;
+  min-height: 1000px;
+  font-family: 'Helvetica Neue';
+  background-color: transparent;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1;
+  background-image: url("/images/pawel-czerwinski-JEV7CrJTUNE-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  border: 5px solid rgba(0, 0, 0, 0);
+}
+
+h1{
+  font-weight:700 !important;
+  color: rgba(24, 7, 7, 0.75) !important;
+}
+.date{
+  color: #E4E9FD !important;
+}
+.h1-container {
+  min-width: 40vh;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  background-color:#1e9188;
+}
+.list-container {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: #e8edff94;
+  color: rgba(21, 20, 20, 0.564);
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.603);
+  font-size: 1.4rem;
+  width: 600px; /* Set your desired fixed width here */
+}
+li{
+  margin-top: 1.5vh;
+}
+input#workItem {
+  width: 450px;
+  padding: 10px;
+  border-bottom: #E4E9FD solid 30px;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 1.5vh;
+  box-shadow: inset 0 -3px 0 0 #f1f1f1;
+}
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.872);;
+  font-weight: 200;
+  width: 100%;
+  box-shadow: inset 0 -3px 0 0 #f1f1f1;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+input#todoNextItem::placeholder{
+  font-size: 1.8rem;
+  color: rgba(255, 255, 255, 0.872);
+}
+.button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: white !important;
+  color: green;
+  transition: transform 0.5s, box-shadow 0.5s; /* Added box-shadow transition */
+  border: none;
+}
+
+.button:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Added box-shadow style */
+}
+
+.main-container{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+}
+.todo-checkbox:checked + .checkbox-label {
+  text-decoration: line-through;
+}
+footer{
+  color: #00000000;
+  font-size: 0.8rem;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+/*/////////////////////*/
+
+
+/* Custom checkbox styles */
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  padding-left: 50px;
+  margin-bottom: px;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Checkmark */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Checked checkbox styles */
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Checkmark animation */
+.custom-checkbox input:checked ~ .checkmark:before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 10px;
+  width: 4px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+  top: 7px;
+  left: 9px;
+  animation: checkbox-scale 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/* Checkmark scale animation */
+@keyframes checkbox-scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,50 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="~{fragments/header::myheaeder}"></div>
+    <title>Todo App</title>
+</head>
+
+<!-- MAIN CONTAINER -->
+<div class="container main-container">
+
+<!--    DATE ON THE TOP -->
+    <div class="pt-5 pb-5 h1-container">
+        <h1 class="date" th:text="${todaysDate}"></h1>
+    </div>
+
+<!--MAIN SECTION-->
+    <div>
+        <ol class="list-container mt-4">
+            <h1 th:text="${h1Label}" class="pt-5 pb-5">Todo list</h1>
+
+            <form th:action="@{/remove}" method="post">
+
+            <input type="text" name="hiddenListName" th:value="${hiddenListName}" hidden>
+            <li th:each="item : ${taskList}">
+                <label class="custom-checkbox">
+                    <input type="checkbox" name="itemToRemove" th:value="${item}" onchange="this.form.submit()" class="todo-checkbox"/>
+                    <span class="checkmark"></span>
+                    <span class="checkbox-label" th:text="${item}"></span>
+                </label>
+            </li>
+            </form>
+                <form th:action="@{/}" method="POST" class="pt-5">
+                    <input type="text" name="hiddenListName" th:value="${hiddenListName}" hidden>
+                    <div class="container input-button mt-4">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <input type="text" name="todoNextItem" id="todoNextItem" placeholder="Next Item" autocomplete="off">
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-end align-items-center">
+                                <button class="button mb-2" type="submit" name="h1Label" th:value="${h1Label}">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </ol>
+    </div>
+
+<!--FOOTER    -->
+    <footer style="color: #043d7a">
+        <div th:replace="~{fragments/footer::myfooter}"></div>
+    </footer>
