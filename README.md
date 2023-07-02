@@ -14,6 +14,10 @@ The repository contains the following full stack projects:
     - Description: A todo list application that enables users to create custom lists, with all data saved in MongoDB.
     - Technologies: Spring Boot, Thymeleaf, MongoDB (running on Docker)
 
+3. **GUI CRUD Web App**
+    - Description: A graphical user interface (GUI) CRUD web application that allows users to sign in and manage users with different functionalities based on their roles.
+    - Technologies: Spring Boot, Java, PostgreSQL (running on AWS or Docker)
+
 Feel free to explore each project's folder to learn more about their specific functionalities and implementation details.
 
 ## Prerequisites
