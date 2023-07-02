@@ -1,18 +1,18 @@
 # Website-CRUD Project
 
 _**pictures at the bottom_**
-#### update: 1.7.2023 testing instance AWS at the moment down. Please clone the project and test it localy
-
-#### update: 1.7.2023: implemented Thymeleaf templates, html code reduced by 300 lines. Templates located:
-
-```properties
-resources/templates/fragments
-```
-
+#### update: 13.6.2023 uploaded to AWS cloud services
 
 _## Access link:_
 http://popjakwebappspringboot-env.eba-s3hgzvt3.eu-north-1.elasticbeanstalk.com/
 
+
+
+***
+## To login as a manager to get extra functionality, use these credentials
+### **name: apopjak**
+
+### **password: test123**
 
 
 ## Technologies Used
