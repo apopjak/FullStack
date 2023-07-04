@@ -1,4 +1,4 @@
-# Full Stack Projects Repository
+# TEST
 
 Welcome to my Full Stack Projects Repository! Here you will find a collection of various full stack projects, all developed using Java, Spring Boot, Thymeleaf, and either PostgreSQL or MongoDB as the database and external APIs
 
