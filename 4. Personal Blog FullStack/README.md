@@ -1,7 +1,6 @@
 # Personal Website
 
-Welcome to my personal website project! This project was built solo and showcases my skills in web development, using various technologies and tools.
-
+Welcome to my personal website project! This single page which project was built solo. (CSS Styling is from external source).
 
 ![img.png](img.png)
 
