@@ -1,6 +1,9 @@
-# Personal Website
+# Simple Personal Blog
 
-Welcome to my personal website project! This single page which project was built solo. (CSS Styling is from external source).
+Welcome to my personal website project! This single page which project was built solo. (CSS Styling is from external source). Frontend is made of HTML,CSS,THYMELEAF, Backend is Java 17 and SpringBoot.
+Project us utilizing thymeleaf templating which ensure that code is very short. Whole project is connected to mongoDB which runs on docker. 
+
+#
 
 ![img.png](img.png)
 
@@ -14,7 +17,7 @@ Welcome to my personal website project! This single page which project was built
 - HTML
 - CSS
 - Java
-- Spring Boot
+- Spring Boot 3
 - MongoDB
 - Thymeleaf
 - Docker
