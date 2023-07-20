@@ -1,0 +1,24 @@
+<head>
+    <div th:replace="~{/fragments/header::myheaeder}"></div>
+    <title>Andrej Popjak BLOG</title>
+</head>
+<div class="container">
+<h1>Update your blog</h1>
+    <form action="#" th:action="@{/post/update}" th:object="${blog}" method="post">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" class="form-control" name="newTitle" th:value="*{getTitle()}">
+            <input name="blogTitle" th:value="${title}" hidden>
+            </div>
+            <div class="form-group">
+                <label>Post</label>
+                <textarea th:text="*{body}" class="form-control" name="newBlogContent" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary mt-2" type="submit">Publish</button>
+        <p th:if="${errorBlogExists}" class="alert alert-danger col-xs-offset-1 col-xs-8 mt-3">Blog post with this title already exists</p>
+        <p th:if="${errorEmptyTitle}" class="alert alert-danger col-xs-offset-1 col-xs-8 mt-3">Title or body is empty</p>
+    </form>
+</div>
+<footer class="footer">
+    <div th:replace="~{/fragments/footer::myfooter}"></div>
+</footer>

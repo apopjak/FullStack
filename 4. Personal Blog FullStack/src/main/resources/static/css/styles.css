@@ -1,0 +1,51 @@
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {    
+    color: #1abc9c !important;
+}
+.nav-item{
+    padding-left: 20px;
+}
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #1abc9c;
+}
+.custom-link {
+    color: inherit; /* Inherits the text color from the parent */
+    text-decoration: none; /* Remove underline from the link */
+}
+
+.custom-link:hover {
+    color: inherit; /* Inherits the text color when hovering */
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+    color: #fff;
+}
+#truncated-text {
+    content: "...";
+    cursor: pointer;
+}

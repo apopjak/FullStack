@@ -1,0 +1,31 @@
+<head>
+    <div th:replace="~{/fragments/header::myheaeder}"></div>
+    <title>Andrej Popjak BLOG</title>
+</head>
+    <div class="container">
+        <div class="container" style="word-wrap: break-word;">
+            <h1 th:text="${blogPost.get().getTitle()}"></h1>
+            <p th:text="${blogPost.get().getBody()}"></p>
+        </div>
+            <a class="btn btn-outline-secondary text-decoration-none" th:href="@{/post/update/{title}(title=${blogPost.get().getTitle()})}">
+                Update post
+            </a>
+            <a class="btn btn-outline-danger text-decoration-none" th:href="@{/post/delete/{title}(title=${blogPost.get().getTitle()})}" onclick="confirmRemovePost(event)">
+                Remove post
+            </a>
+
+            <script>
+                function confirmRemovePost(event) {
+                    event.preventDefault();
+
+                    var confirmed = confirm("Do you really want to remove this post?");
+                    if (confirmed) {
+                        window.location.href = event.target.getAttribute("href");
+                    }
+                }
+            </script>
+    </div>
+<!--FOOTER    -->
+<footer class="footer">
+    <div th:replace="~{/fragments/footer::myfooter}"></div>
+</footer>
