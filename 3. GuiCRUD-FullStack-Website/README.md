@@ -1,9 +1,8 @@
 # Website-CRUD Project
 
 _**pictures at the bottom_**
-#### update: 1.7.2023 testing instance AWS at the moment down. Please clone the project and test it localy
 
-#### update: 1.7.2023: implemented Thymeleaf templates, html code reduced by 300 lines. Templates located:
+
 
 ```properties
 resources/templates/fragments
